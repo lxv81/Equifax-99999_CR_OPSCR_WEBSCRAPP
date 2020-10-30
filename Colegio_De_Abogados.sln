@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Colegio_De_Abogados", "Colegio_De_Abogados\Colegio_De_Abogados.pyproj", "{8F5106D3-30FA-499E-9905-7A7AA4E4234E}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "colegiobiologos", "colegiobiologos\colegiobiologos.pyproj", "{D4A981D9-01B2-43FA-B2F6-B95F0629C80B}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "camara_cr", "camara_cr\camara_cr.pyproj", "{5BF423B8-2F55-487E-AC75-BBA83EB4BFE8}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "criminologia", "criminologia\criminologia.pyproj", "{4115B9C0-AB7C-415F-8C05-8D2B02346019}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "colegiodentistas", "colegiodentistas\colegiodentistas.pyproj", "{37742FB2-E399-4CA4-90E9-2CE8AA364095}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "geologos", "geologos\geologos.pyproj", "{F3792028-F8DB-4984-9E34-B5D7C973FA3C}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ColegioFarmaceuticos", "ColegioFarmaceuticos\ColegioFarmaceuticos.pyproj", "{BC46BA01-4608-4173-99F2-FED984DF6254}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "DEA", "DEA\DEA.pyproj", "{A7CDD1AF-347E-42B1-AA02-6067D7DE9D31}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "BuscadosElSalvador", "BuscadosElSalvador\BuscadosElSalvador.pyproj", "{B94B2552-487B-406C-8CD4-1D88AD6D6EF2}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Colegiados-CPIC", "Colegiados-CPIC\Colegiados-CPIC.pyproj", "{8AC5F50C-A7BC-45CF-B0BA-5668097788A6}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Lista-cpri", "Lista-cpri\Lista-cpri.pyproj", "{DEE7DF77-ACE4-41F5-9523-5A961B4F68B2}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Lista_cpncr", "Lista_cpncr\Lista_cpncr.pyproj", "{BDC4BC83-8B44-45D5-B47E-CC70DB448404}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Europol", "Europol\Europol.pyproj", "{27B08A36-2337-4A63-8B81-9269B7978BFB}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "FBI", "FBI\FBI.pyproj", "{AE2374C0-780A-401D-BCDD-054A32CE1DB9}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Colegio_de_AbogadosCopia1", "Colegio_de_AbogadosCopia1\Colegio_de_AbogadosCopia1.pyproj", "{2D3771D2-FF16-4667-AF35-5F4A2CE51367}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Colegios_Abogados2", "Colegios_Abogados2\Colegios_Abogados2.pyproj", "{DA8A5FF9-C169-40FD-9889-54DB97A7F967}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "US-ice", "US-ice\US-ice.pyproj", "{A46F895E-F890-415F-89E5-77F98BAEF35B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F5106D3-30FA-499E-9905-7A7AA4E4234E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F5106D3-30FA-499E-9905-7A7AA4E4234E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4A981D9-01B2-43FA-B2F6-B95F0629C80B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4A981D9-01B2-43FA-B2F6-B95F0629C80B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BF423B8-2F55-487E-AC75-BBA83EB4BFE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BF423B8-2F55-487E-AC75-BBA83EB4BFE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4115B9C0-AB7C-415F-8C05-8D2B02346019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4115B9C0-AB7C-415F-8C05-8D2B02346019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37742FB2-E399-4CA4-90E9-2CE8AA364095}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37742FB2-E399-4CA4-90E9-2CE8AA364095}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3792028-F8DB-4984-9E34-B5D7C973FA3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3792028-F8DB-4984-9E34-B5D7C973FA3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC46BA01-4608-4173-99F2-FED984DF6254}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC46BA01-4608-4173-99F2-FED984DF6254}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7CDD1AF-347E-42B1-AA02-6067D7DE9D31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7CDD1AF-347E-42B1-AA02-6067D7DE9D31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B94B2552-487B-406C-8CD4-1D88AD6D6EF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B94B2552-487B-406C-8CD4-1D88AD6D6EF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AC5F50C-A7BC-45CF-B0BA-5668097788A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AC5F50C-A7BC-45CF-B0BA-5668097788A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEE7DF77-ACE4-41F5-9523-5A961B4F68B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEE7DF77-ACE4-41F5-9523-5A961B4F68B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDC4BC83-8B44-45D5-B47E-CC70DB448404}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDC4BC83-8B44-45D5-B47E-CC70DB448404}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27B08A36-2337-4A63-8B81-9269B7978BFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27B08A36-2337-4A63-8B81-9269B7978BFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE2374C0-780A-401D-BCDD-054A32CE1DB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE2374C0-780A-401D-BCDD-054A32CE1DB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D3771D2-FF16-4667-AF35-5F4A2CE51367}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D3771D2-FF16-4667-AF35-5F4A2CE51367}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA8A5FF9-C169-40FD-9889-54DB97A7F967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA8A5FF9-C169-40FD-9889-54DB97A7F967}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A46F895E-F890-415F-89E5-77F98BAEF35B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A46F895E-F890-415F-89E5-77F98BAEF35B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {60F66CBF-C0A7-4105-BC43-DCCF84639D3F}
+	EndGlobalSection
+EndGlobal
