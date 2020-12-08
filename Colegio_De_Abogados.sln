@@ -47,6 +47,10 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Buscados_Buenos_Aires", "Bu
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "National_Crime_agency", "National_Crime_agency\National_Crime_agency.pyproj", "{C4C51534-7187-46D0-8AF9-DE5B4A22C88A}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Colegios_Contadores", "Colegios_Contadores\Colegios_Contadores.pyproj", "{77624C9E-93D8-4C1B-8A02-0B1765F173D7}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Lista_CCPCR", "Lista_CCPCR\Lista_CCPCR.pyproj", "{9C1E7C4A-12D7-4FEF-ACD2-A6371E18AB00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +101,10 @@ Global
 		{3474A50F-CBDA-4571-9FE4-5143EFFBAA06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4C51534-7187-46D0-8AF9-DE5B4A22C88A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C4C51534-7187-46D0-8AF9-DE5B4A22C88A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77624C9E-93D8-4C1B-8A02-0B1765F173D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77624C9E-93D8-4C1B-8A02-0B1765F173D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C1E7C4A-12D7-4FEF-ACD2-A6371E18AB00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C1E7C4A-12D7-4FEF-ACD2-A6371E18AB00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

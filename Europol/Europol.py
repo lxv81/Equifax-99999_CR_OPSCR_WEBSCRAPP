@@ -38,7 +38,7 @@ class Table:
             return valor
 
         except Exception as e:
-              print("An exception occurred get_rows" + str(e))
+              print("Error personas" + str(e))
 
    
 
@@ -121,19 +121,16 @@ if "__main__" == __name__:
 
     personas = driver.find_elements_by_class_name("wanted_teaser_quick_info")
     print(len(personas))
-   
+    total =len(personas)
     column_rows=[]
-    for item in range(0,42): 
+    for item in range(0,total): 
                   valor = table.personas(item)
                   if valor == True:
                       data =table.get_data(item)
                       if data is not None:
                          if len(data) > 0:
                               rows.append(data)
-                  
-              #   driver.execute_script("window.history.go(-1)")
-               #   Atras = driver.find_element_by_id("homeWantedTop") 
-                 # Atras.click()
+
                               driver.forward()
                               driver.back()
     driver.close()
