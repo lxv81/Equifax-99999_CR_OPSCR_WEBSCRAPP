@@ -83,17 +83,17 @@ class Table:
                 info = lista[element]
                 title= info.find_element_by_class_name("title")
                 titulo= title.text
-                if item != 0: 
-                    name= info.find_element_by_class_name("name")
-                    nombre= name.text
-                    a = name.find_element_by_tag_name("a")
-                    link= a.get_attribute("href")
-                    links.append([nombre,titulo,link])
+                if item not in [1,2,3]: 
+                        name= info.find_element_by_class_name("name")
+                        nombre= name.text
+                        a = name.find_element_by_tag_name("a")
+                        link= a.get_attribute("href")
+                        links.append([nombre,titulo,link])
 
                 else:
-                    a = title.find_element_by_tag_name("a")
-                    link= a.get_attribute("href")
-                    links.append([titulo,'',link])
+                        a = title.find_element_by_tag_name("a")
+                        link= a.get_attribute("href")
+                        links.append([titulo,nombre,link])
               
             return links  
 
@@ -122,43 +122,31 @@ if "__main__" == __name__:
     PATH = "C:\Pentaho\chromedriver.exe"
     driver = webdriver.Chrome(PATH)
     driver.implicitly_wait(2)
-    #Url="https://www.fbi.gov/wanted/fugitives"
-    #driver.get(Url)
+    rows= []
+    ListaUrl=["https://www.fbi.gov/wanted/kidnap","https://www.fbi.gov/wanted/parental-kidnappings","https://www.fbi.gov/wanted/topten",
+            "https://www.fbi.gov/wanted/bank-robbers","https://www.fbi.gov/wanted/vicap","https://www.fbi.gov/wanted/fugitives","https://www.fbi.gov/wanted/terrorism"]
     table = Table(driver)
     time.sleep(1)
-   # for i in range(0,3):
-    Url = ''
-    i = 1
-    if i == 1:
-        Url="https://www.fbi.gov/wanted/bank-robbers"  
-       # if i == 0:
-        #        Url="https://www.fbi.gov/wanted/topten"  
-       # if i == 1:
-        #        Url="https://www.fbi.gov/wanted/terrorism"
- #   if i == 2:
-  #          Url="https://www.fbi.gov/wanted/bank-robbers"
-      #  if i == 3:
-         #   Url="https://www.fbi.gov/wanted/vicap"
-      # if i == 4:
-       #     Url="https://www.fbi.gov/wanted/fugitives"
-        
+    contador = 0
+    for Url in ListaUrl:       
         driver.get(Url)
         table.scroll() 
         time.sleep(4)
-        rows= []
-        Data = table.get_Datos(i)
+        contador = contador + 1
+        Data = table.get_Datos(contador)
         if Data is not None:
                if len(Data) > 0:
                    for item in Data:
                         driver.get(item[2])
-                        info = table.get_rows(item[0],item[1],i)
+                        info = table.get_rows(item[0],item[1],Url)
                         if info is not None:
                             if len(info) > 0:
                                 rows.append(info)
                         else:
                             rows.append([item[1],item[0],'','','','','','',''])
                         driver.back()
-
+        driver.forward()
+    driver.close()
     Encabezados=['titulo','nombre','fecha_nacimiento','cabello','ojos','Altura','peso','sexo','nacionalidad']
     if len(rows) > 0 and len(Encabezados) > 0:
         try:

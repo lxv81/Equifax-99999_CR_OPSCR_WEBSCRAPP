@@ -111,7 +111,7 @@ if "__main__" == __name__:
     driver.execute_script("window.history.go(-1)")
     d=table.get_filaCompleta(-1)
     size=len(d)
-    for item in range(1,paginacion):
+    for item in range(paginacion):
             for item in range(0,size):
                   elemento= table.get_filaCompleta(item)
                   data =table.get_Estado(elemento)
