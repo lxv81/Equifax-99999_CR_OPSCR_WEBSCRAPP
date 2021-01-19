@@ -63,35 +63,31 @@ if "__main__" == __name__:
     PATH = "C:\Pentaho\chromedriver.exe"
     driver = webdriver.Chrome(PATH)
     driver.implicitly_wait(2)
-    Url="https://www.tupista.info/mas-buscados/personas/"
-   
-    driver.get(Url)
-    table = Table(driver)
     rows=[]
-    time.sleep(2)
-    
-
-    listaPaginacion = driver.find_element_by_class_name("custom-pagination")
-    a= listaPaginacion.find_elements_by_tag_name("a")  
-    numero_paginas=a[-2].text
-    numero_paginas = int(numero_paginas)   
-    numero_paginas =numero_paginas + 1
-    column_rows=[]
-    for element in range(0,numero_paginas):
-           
-            data =  driver.find_element_by_class_name("most-wanted")
-            lista = data.find_elements_by_class_name("most-wanted__box")
-            for item in lista:               
-                  data =table.get_data(item)
-                  if data is not None:
-                     if len(data) > 0:
-                          rows.append(data)
+    ListaUrl =["https://www.tupista.info/mas-buscados/personas/","https://www.tupista.info/personas/"]
+    for Url in ListaUrl:
+        driver.get(Url)
+        table = Table(driver)    
+        time.sleep(2)
+        listaPaginacion = driver.find_element_by_class_name("custom-pagination")
+        a= listaPaginacion.find_elements_by_tag_name("a")  
+        numero_paginas=a[-2].text
+        numero_paginas = int(numero_paginas)   
+        numero_paginas =numero_paginas + 1
+        for element in range(0,numero_paginas):     
+                data =  driver.find_element_by_class_name("most-wanted")
+                lista = data.find_elements_by_class_name("most-wanted__box")
+                for item in lista:               
+                      data =table.get_data(item)
+                      if data is not None:
+                         if len(data) > 0:
+                              rows.append(data)
 
           
-            validacion = table.Paginacion()
-            if validacion == False:
-                break
-   
+                validacion = table.Paginacion()
+                if validacion == False:
+                    break
+        driver.forward()
    
     driver.close()
     if len(rows) > 0 :

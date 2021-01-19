@@ -69,7 +69,7 @@ if "__main__" == __name__:
     table = Table(driver)
  
     Encabezados=table.get_Emcabezados()
-    time.sleep(1)
+    time.sleep(5)
     paginas = driver.find_element_by_id("example_paginate")
     lista=paginas.find_elements_by_tag_name("a")
     Total_paginas=lista[-2].text
@@ -87,7 +87,7 @@ if "__main__" == __name__:
            table.Paginacion()
           
          
-    
+    driver.close()
     if len(rows) > 0 and len(Encabezados) > 0:
         try:
             df = pd.DataFrame(rows, columns=Encabezados) 

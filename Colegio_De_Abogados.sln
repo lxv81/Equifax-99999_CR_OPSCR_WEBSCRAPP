@@ -51,6 +51,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Colegios_Contadores", "Cole
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Lista_CCPCR", "Lista_CCPCR\Lista_CCPCR.pyproj", "{9C1E7C4A-12D7-4FEF-ACD2-A6371E18AB00}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ColegioBibliotecología", "ColegioBibliotecología\ColegioBibliotecología.pyproj", "{0000348F-751E-4E9F-9FB0-FA3AF9AAFF94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,8 @@ Global
 		{77624C9E-93D8-4C1B-8A02-0B1765F173D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C1E7C4A-12D7-4FEF-ACD2-A6371E18AB00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9C1E7C4A-12D7-4FEF-ACD2-A6371E18AB00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0000348F-751E-4E9F-9FB0-FA3AF9AAFF94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0000348F-751E-4E9F-9FB0-FA3AF9AAFF94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
