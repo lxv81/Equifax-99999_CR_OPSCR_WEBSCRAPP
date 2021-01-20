@@ -35,75 +35,66 @@ class Table:
              peso =''
              sexo =''
              pais =''
-             delito = self.driver.find_element_by_class_name("wanted-for").text
+             wantedfor = self.driver.find_elements_by_class_name("field--name-field-wanted-for")
+             if len(wantedfor) > 0:
+                 delito =wantedfor[0].text
 
-             tabla = self.driver.find_element_by_tag_name("table")
-             tr= tabla.find_elements_by_tag_name("tr")
-             if len(tr) > 0 :
-                 for items in tr: 
-                      td=items.find_elements_by_tag_name("td")
-                      if td[0].text == 'Name':
-                             nombre =td[1].text
+             name = self.driver.find_elements_by_class_name("field--name-field-most-wanted-name")
+             if len(name) > 0 :
+                 nombre =name[0].text
+                 nombre = nombre.replace("NAME","")
 
-                      if td[0].text == 'Hair':
-                             cabello =td[1].text
+             Gender = self.driver.find_elements_by_class_name("field--name-field-gender")
+             if len(Gender) > 0 :
+                 sexo =Gender[0].text
+                 sexo = sexo.replace("GENDER","")
 
-                      if td[0].text == 'Eyes':
-                                    ojos =td[1].text
+             aliass = self.driver.find_elements_by_class_name("field--name-field-most-wanted-alias")
+             if len(aliass) > 0 :
+                 alias =aliass[0].text
+                 alias = alias.replace("ALIAS","")
 
-                      if td[0].text == 'Height':
-                                    Altura =td[1].text
+             PlaceBirth = self.driver.find_elements_by_class_name("field--name-field-place-of-birth")
+             if len(PlaceBirth) > 0 :
+                 pais =PlaceBirth[0].text
+                 pais = pais.replace("PLACE OF BIRTH","")
 
-                      if td[0].text == 'Weight':
-                                    peso =td[1].text
+             height = self.driver.find_elements_by_class_name("field--name-field-height")
+             if len(height) > 0 :
+                 Altura =height[0].text
+                 Altura = Altura.replace("HEIGHT","")
 
-                      if td[0].text == 'Gender':
-                                    sexo = td[1].text
+             weight = self.driver.find_elements_by_class_name("field--name-field-weight")
+             if len(weight) > 0 :
+                 peso =weight[0].text
+                 peso = peso.replace("WEIGHT","")
 
-                      if td[0].text == 'Place of Birth':
-                                    pais =td[1].text
+             eyes = self.driver.find_elements_by_class_name("field--name-field-eyes")
+             if len(eyes) > 0 :
+                 ojos =eyes[0].text
+                 ojos = ojos.replace("EYES","")
 
-                      if td[0].text == 'Alias':
-                                    alias =td[1].text
-
-                 return [nombre,delito,alias,cabello,ojos,Altura,peso,sexo,pais] 
+             hair = self.driver.find_elements_by_class_name("field--name-field-hair")
+             if len(hair) > 0 :
+                 cabello =hair[0].text
+                 cabello = cabello.replace("HAIR","")
+             return [nombre,delito,alias,cabello,ojos,Altura,peso,sexo,pais] 
          except Exception as error :
                 print("Error busco tabla" + str(error))
 
 
-    def get_Datos(self,item):
+    def get_Urls(self):
         try:
-            titulo= ''
-            nombre= ''
-            link = ''
-            if item == 0:
-                lista = driver.find_element_by_xpath('//*[@id="node-page-31970"]/div/div/div[1]')
-            if item == 1:
-               lista = driver.find_element_by_xpath('//*[@id="node-page-31970"]/div/div/div[2]')
-
-            if item == 2:
-                lista = driver.find_element_by_xpath('//*[@id="node-page-31970"]/div/div/div[3]')
-
-            if item == 3:
-               lista = driver.find_element_by_xpath('//*[@id="node-page-31970"]/div/div/div[4]')
-
-            li = lista.find_elements_by_tag_name("div")
-            print(len(li))
-            total = len(li)
-            resul = total 
-            links = []
-            for element in li: 
-                try:
-                     p = element.find_elements_by_tag_name("p")
-                     a = element.find_element_by_tag_name("a")
-                     link= a.get_attribute("href")
-                     print(link)
-                     links.append(link)
-                except Exception as e :
-                   print("Error" +str(e))
-               
+             ul=  driver.find_element_by_xpath('//*[@id="blazy-views-most-wanted-block-1-1"]')
+             li = ul.find_elements_by_tag_name("li")
+             ListaLinks =[]
+             
+             for item in li:
+                a = item.find_element_by_tag_name("a")
+                link= a.get_attribute("href")
+                ListaLinks.append(link)
               
-            return links  
+             return ListaLinks  
 
         except Exception as e:
               print("Error en get_Datos " +str(e))
@@ -132,45 +123,22 @@ if "__main__" == __name__:
     driver.implicitly_wait(2)
     Url="https://www.ice.gov/most-wanted#wcm-survey-target-id"
     driver.get(Url)
-    table = Table(driver)
-    time.sleep(1)
-    for i in range(3,4):
-        ul=  driver.find_element_by_class_name("item-list")
-        li = ul.find_elements_by_tag_name("li")
-        if i == 1:
-            ul=  driver.find_element_by_class_name("item-list")
-            li = ul.find_elements_by_tag_name("li")
-            a= li[1].find_element_by_tag_name("a")
-            a.click()
-            
-        if i == 2:
-            ul=  driver.find_element_by_class_name("item-list")
-            li = ul.find_elements_by_tag_name("li")
-            a= li[2].find_element_by_tag_name("a")
-            a.click()
-        if i == 3:
-            ul=  driver.find_element_by_class_name("item-list")
-            li = ul.find_elements_by_tag_name("li")
-            a= li[3].find_element_by_tag_name("a")
-            a.click()
-
+    table = Table(driver) 
         
-        time.sleep(3)
-        rows= []
-        Data = table.get_Datos(i)
-        if Data is not None:
-               if len(Data) > 0:
-                   for item in Data:
-                        driver.get(item)
-                        info = table.get_rows()
-                        if info is not None:
-                            if len(info) > 0:
-                                rows.append(info)
-                        else:
-                            rows.append([item[1],item[0],'','','','','','',''])
-                        driver.back()
+    time.sleep(3)
+    rows= []
+    Data = table.get_Urls()
+    if Data is not None:
+       if len(Data) > 0:
+          for item in Data:
+            driver.get(item)
+            info = table.get_rows()
+            if info is not None:
+               if len(info) > 0:
+                   rows.append(info)
+            driver.forward()
 
-        
+    driver.close()   
     Encabezados=['nombre','delito','alias','cabello','ojos','Altura','peso','sexo','pais']
     if len(rows) > 0 and len(Encabezados) > 0:
         try:
